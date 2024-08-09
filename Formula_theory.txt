@@ -1,0 +1,55 @@
+Step 1: Identify key factors to include
+We want to capture:
+
+Value
+Quality
+Growth potential
+Financial health
+Market sentiment
+Step 2: Select metrics for each factor
+
+Value: Acquirer's Multiple (EV/EBIT)
+Quality: Return on Invested Capital (ROIC)
+Growth: 3-year revenue growth rate
+Financial health: Altman Z-Score
+Market sentiment: Relative Strength Index (RSI)
+Step 3: Develop the formula
+Let's create a composite score that ranks stocks based on these factors. We'll use percentile rankings for each metric to normalize the values.
+
+Composite Score = (0.3 * Value Rank) + (0.25 * Quality Rank) + (0.2 * Growth Rank) + (0.15 * Financial Health Rank) + (0.1 * Sentiment Rank)
+
+Where:
+
+Value Rank = Percentile rank of inverse Acquirer's Multiple (lower is better)
+Quality Rank = Percentile rank of ROIC
+Growth Rank = Percentile rank of 3-year revenue growth rate
+Financial Health Rank = Percentile rank of Altman Z-Score
+Sentiment Rank = Percentile rank of RSI (assuming 50 as neutral, distance from 50 in either direction is worse)
+Step 4: Incorporate a margin of safety
+To add an extra layer of protection, we'll include a margin of safety factor:
+
+Final Score = Composite Score * (1 - (Beta / 2))
+
+This adjustment reduces the score for higher-beta (more volatile) stocks.
+
+Step 5: Set selection criteria
+Select the top 10% of stocks based on the Final Score, but only if their score is above 70.
+
+Step 6: Add a diversification rule
+To ensure diversification, no more than 20% of the selected stocks should be from the same industry.
+
+Final Formula:
+
+Calculate Composite Score
+Apply margin of safety to get Final Score
+Select top 10% of stocks with Final Score > 70
+Apply diversification rule
+Rationale:
+
+The Acquirer's Multiple captures value while being less susceptible to accounting manipulations than P/E.
+ROIC measures the efficiency of capital allocation, a key indicator of long-term success.
+Revenue growth captures momentum and future potential.
+Altman Z-Score provides a comprehensive view of financial health.
+RSI adds a contrarian element, favoring stocks that aren't overbought.
+The beta adjustment adds protection against market volatility.
+The selection criteria and diversification rule add extra layers of risk management.
