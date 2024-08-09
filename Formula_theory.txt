@@ -1,55 +1,63 @@
-Step 1: Identify key factors to include
-We want to capture:
+This advanced stock evaluation model combines multiple proven investment factors to identify high-quality, undervalued companies with strong growth potential and financial stability. The strategy is designed for long-term investors, with a minimum holding period of one year.
 
-Value
-Quality
-Growth potential
-Financial health
-Market sentiment
-Step 2: Select metrics for each factor
+Key Formula:
 
-Value: Acquirer's Multiple (EV/EBIT)
-Quality: Return on Invested Capital (ROIC)
-Growth: 3-year revenue growth rate
-Financial health: Altman Z-Score
-Market sentiment: Relative Strength Index (RSI)
-Step 3: Develop the formula
-Let's create a composite score that ranks stocks based on these factors. We'll use percentile rankings for each metric to normalize the values.
-
-Composite Score = (0.3 * Value Rank) + (0.25 * Quality Rank) + (0.2 * Growth Rank) + (0.15 * Financial Health Rank) + (0.1 * Sentiment Rank)
+Final Score = Composite Score * (1 - (Risk Score * 0.5))
 
 Where:
+Composite Score = (w1 * Value Rank) + (w2 * Quality Rank) + (w3 * Growth Rank) + (w4 * Financial Health Rank)
+Risk Score = (Beta Rank + Debt-to-Equity Rank) / 2
 
-Value Rank = Percentile rank of inverse Acquirer's Multiple (lower is better)
-Quality Rank = Percentile rank of ROIC
-Growth Rank = Percentile rank of 3-year revenue growth rate
-Financial Health Rank = Percentile rank of Altman Z-Score
-Sentiment Rank = Percentile rank of RSI (assuming 50 as neutral, distance from 50 in either direction is worse)
-Step 4: Incorporate a margin of safety
-To add an extra layer of protection, we'll include a margin of safety factor:
+Weights (w1, w2, w3, w4) adjust based on market conditions:
 
-Final Score = Composite Score * (1 - (Beta / 2))
+Bull market: 25% Value, 20% Quality, 30% Growth, 25% Financial Health
+Bear market: 30% Value, 25% Quality, 20% Growth, 25% Financial Health
+Core Metrics:
 
-This adjustment reduces the score for higher-beta (more volatile) stocks.
+Value: Acquirer's Multiple (EV/EBIT)
+Quality: Return on Invested Capital (ROIC) and Earnings Stability
+Growth: 3-year Revenue Growth Rate
+Financial Health: Altman Z-Score and Debt-to-Equity Ratio
+Additional Features:
 
-Step 5: Set selection criteria
-Select the top 10% of stocks based on the Final Score, but only if their score is above 70.
-
-Step 6: Add a diversification rule
-To ensure diversification, no more than 20% of the selected stocks should be from the same industry.
-
-Final Formula:
-
-Calculate Composite Score
-Apply margin of safety to get Final Score
-Select top 10% of stocks with Final Score > 70
-Apply diversification rule
+Percentile ranking used for all metrics to normalize scores
+Quality Rank combines ROIC and Earnings Stability
+Financial Health Rank combines Z-Score and Debt-to-Equity ratio
+Liquidity filters: Minimum market cap and average trading volume
+Exclusion of stocks with Beta > 2
+(What is beta: a measure of volatility relative to the overall market, such as the S&P 500, where a value greater than 1 is more volatile than the market)
 Rationale:
 
-The Acquirer's Multiple captures value while being less susceptible to accounting manipulations than P/E.
-ROIC measures the efficiency of capital allocation, a key indicator of long-term success.
-Revenue growth captures momentum and future potential.
-Altman Z-Score provides a comprehensive view of financial health.
-RSI adds a contrarian element, favoring stocks that aren't overbought.
-The beta adjustment adds protection against market volatility.
-The selection criteria and diversification rule add extra layers of risk management.
+Balanced perspective on company performance and potential
+Emphasis on financial stability and sustainable growth
+Risk-adjusted scoring to enhance long-term returns
+Flexibility to adapt to changing market conditions
+This model offers a data-driven, holistic approach to stock selection, combining the strengths of various investment philosophies while mitigating individual weaknesses. The formula provides a quantitative method to identify companies with strong fundamentals, reasonable valuations, and the potential for sustained long-term performance.
+
+이 고급 주식 평가 모델은 여러 검증된 투자 요소를 결합하여 높은 품질, 저평가된 기업 중 성장 잠재력과 재무 안정성이 뛰어난 기업을 식별합니다. 이 전략은 최소 1년의 보유 기간을 가진 장기 투자자를 위해 설계되었습니다.
+핵심 공식:
+최종 점수 = 종합 점수 * (1 - (위험 점수 * 0.5))
+여기서:
+종합 점수 = (w1 * 가치 순위) + (w2 * 품질 순위) + (w3 * 성장 순위) + (w4 * 재무 건전성 순위)
+위험 점수 = (베타 순위 + 부채 비율 순위) / 2
+가중치 (w1, w2, w3, w4)는 시장 상황에 따라 조정됩니다.
+강세장: 가치 25%, 품질 20%, 성장 30%, 재무 건전성 25%
+약세장: 가치 30%, 품질 25%, 성장 20%, 재무 건전성 25%
+핵심 지표:
+가치: 인수자 배수(EV/EBIT)
+품질: 투하 자본 수익률(ROIC) 및 이익 안정성
+성장: 3년 매출 성장률
+재무 건전성: Altman Z-Score 및 부채 비율
+추가 기능:
+점수 정규화를 위해 모든 지표에 백분위수 순위 사용
+품질 순위는 ROIC와 이익 안정성을 결합합니다.
+재무 건전성 순위는 Z-Score와 부채 비율을 결합합니다.
+유동성 필터: 최소 시가총액 및 평균 거래량
+베타가 2보다 큰 주식 제외
+(베타란: S&P 500과 같은 전체 시장 대비 변동성 지표로, 1보다 크면 시장보다 변동성이 큼)
+근거:
+기업 성과 및 잠재력에 대한 균형 잡힌 관점
+재무 안정성과 지속 가능한 성장에 중점
+장기 수익률 향상을 위한 위험 조정 점수
+변화하는 시장 상황에 적응할 수 있는 유연성
+이 모델은 다양한 투자 철학의 강점을 결합하고 개별 약점을 완화하면서 데이터 기반의 전체적인 주식 선택 접근 방식을 제공합니다. 이 공식은 견고한 펀더멘털, 합리적인 가치 평가, 지속적인 장기 성과 가능성을 가진 기업을 식별하는 정량적 방법을 제공합니다.
