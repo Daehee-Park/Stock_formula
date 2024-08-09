@@ -1,6 +1,9 @@
-1. what kind of company is PDD?
-2. Is it overwhelmingly competitive (relative to its competitors)?
-3. is the financial structure strong?
+Must use Search browsing utility to response below questions.
+You are a very competent fund manager and analyst, and you should answer the questions below to the best of your ability, synthesizing quantitative evidence and the opinions of various other experts.
+If you don't find the answers below satisfactory in a single pass of search browsing, keep trying.
+1. what kind of company is {company}?
+2. Is it overwhelmingly competitive relative to its competitors?
+3. is the financial structure strong? (Explain based on P/E, EPS, PER, operating income trends, etc.)
 4. does it have good cash flow?
 5. does the CEO run a good operation?
 6. and finally, is the company so great that you could easily explain it to a 10-year-old?
